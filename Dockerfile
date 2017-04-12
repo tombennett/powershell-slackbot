@@ -4,7 +4,8 @@ LABEL maintainer="tom@thingamajig.net"
 LABEL description="Windows Server Core with Chocolatey"
 
 #ENV SLACK_TOKEN
-#ENV BOT_LOGLEVEL Verbose
+ENV BOT_NAME poshbot
+ENV BOT_LOGLEVEL Verbose
 #ENV BOT_ADMINS
 
 RUN mkdir c:\\bot
