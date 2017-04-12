@@ -11,13 +11,13 @@ $bot.start #>
 
 
 $botParams = @{
-    Name = "$env:BOT_NAME"
+    Name = $env:BOT_NAME
     BotAdmins = @($env:BOT_ADMINS)
-    CommandPrefix = ‘!’
-    LogLevel = "$env:BOT_LOGLEVEL"
+    CommandPrefix = '!'
+    LogLevel = $env:BOT_LOGLEVEL
     BackendConfiguration = @{
         Name = 'SlackBackend'
-        Token = "$env:SLACK_TOKEN"
+        Token = $env:SLACK_TOKEN
     }
     AlternateCommandPrefixes = 'bender', 'hal'
 }
