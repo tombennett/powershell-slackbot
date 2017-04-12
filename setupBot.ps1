@@ -15,7 +15,6 @@ $botParams = @{
     BotAdmins = @($env:BOT_ADMINS)
     CommandPrefix = '!'
     LogLevel = $env:BOT_LOGLEVEL
-    LogDirectory = 'C:\logs'
     BackendConfiguration = @{
         Name = 'SlackBackend'
         Token = $env:SLACK_TOKEN

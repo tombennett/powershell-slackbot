@@ -10,8 +10,6 @@ ENV BOT_LOGLEVEL Verbose
 
 RUN mkdir c:\\bot
 
-RUN mkdir c:\\logs
-
 COPY setupBot.ps1 c:\\bot
 
 RUN powershell -executionpolicy bypass -command \
