@@ -3,9 +3,9 @@ FROM rocklobster/chocolatey:0.10.5
 LABEL maintainer="tom@thingamajig.net"
 LABEL description="Windows Server Core with Chocolatey"
 
-ENV SLACK_TOKEN
-ENV BOT_LOGLEVEL Verbose
-ENV BOT_ADMINS
+#ENV SLACK_TOKEN
+#ENV BOT_LOGLEVEL Verbose
+#ENV BOT_ADMINS
 
 RUN mkdir c:\\bot
 
