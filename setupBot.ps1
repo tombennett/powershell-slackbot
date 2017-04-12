@@ -22,6 +22,10 @@ $botParams = @{
     AlternateCommandPrefixes = 'bender', 'hal'
 }
 
+Write-Host "Bot Name: $env:BOT_NAME"
+Write-Host "Bot LogLevel: $env:BOT_LOGLEVEL"
+Write-Host "Slack Token: $env:SLACK_TOKEN"
+
 $myBotConfig = New-PoshBotConfiguration @botParams
 
 # Start a new instance of PoshBot interactively or in a job.
