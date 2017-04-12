@@ -21,4 +21,4 @@ RUN powershell -executionpolicy bypass -command \
       cd c:\bot
 
 #CMD [ "powershell", ". c:\bot\setupBot.ps1" ]	
-CMD powershell .\setupBot.ps1
+CMD powershell . c:\bot\setupBot.ps1
