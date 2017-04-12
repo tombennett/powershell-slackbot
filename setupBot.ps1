@@ -15,6 +15,7 @@ $botParams = @{
     BotAdmins = @($env:BOT_ADMINS)
     CommandPrefix = '!'
     LogLevel = $env:BOT_LOGLEVEL
+    LogDirectory = 'C:\bot'
     BackendConfiguration = @{
         Name = 'SlackBackend'
         Token = $env:SLACK_TOKEN
@@ -24,7 +25,8 @@ $botParams = @{
 
 Write-Host "Bot Name: $env:BOT_NAME"
 Write-Host "Bot LogLevel: $env:BOT_LOGLEVEL"
-Write-Host "Slack Token: $env:SLACK_TOKEN"
+Write-Host "Bot Admins: $env:BOT_ADMINS"
+#Write-Host "Slack Token: $env:SLACK_TOKEN"
 
 $myBotConfig = New-PoshBotConfiguration @botParams
 
