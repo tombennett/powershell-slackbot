@@ -17,6 +17,8 @@ RUN powershell -executionpolicy bypass -command \
 	Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 RUN powershell -executionpolicy bypass -command \
       Install-Module -Name PoshBot ;\
-	Import-Module PoshBot
+	Import-Module PoshBot ;\
+      cd c:\bot
 
-CMD [ "powershell", ". c:\bot\setupBot.ps1" ]	
+#CMD [ "powershell", ". c:\bot\setupBot.ps1" ]	
+CMD powershell .\setupBot.ps1
