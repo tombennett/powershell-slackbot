@@ -8,7 +8,7 @@ ENV BOT_NAME poshbot
 ENV BOT_LOGLEVEL Verbose
 #ENV BOT_ADMINS
 
-WORKDIR c:\bot
+WORKDIR c:\\bot
 
 RUN powershell -executionpolicy bypass -command \
 	Install-PackageProvider NuGet -Force ;\
