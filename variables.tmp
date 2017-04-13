@@ -1,0 +1,3 @@
+# Rename file to be `variables`
+SLACK_TOKEN=xoxb-YOURSLACKBOTTOKEN
+BOT_ADMINS=yourslackname
