@@ -8,17 +8,18 @@ ENV BOT_NAME poshbot
 ENV BOT_LOGLEVEL Verbose
 #ENV BOT_ADMINS
 
+WORKDIR c:\bot
+
 RUN powershell -executionpolicy bypass -command \
 	Install-PackageProvider NuGet -Force ;\
 	Import-PackageProvider NuGet -Force ;\
 	Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
 RUN powershell -executionpolicy bypass -command \
       Install-Module -Name PoshBot ;\
-	Import-Module PoshBot ;\
-      mkdir c:\bot ;\
-      cd c:\bot
+	Import-Module PoshBot
 
-COPY setupBot.ps1 c:\\bot
+COPY setupBot.ps1 .
 
 #CMD [ "powershell", ". c:\bot\setupBot.ps1" ]	
 CMD powershell . c:\bot\setupBot.ps1
