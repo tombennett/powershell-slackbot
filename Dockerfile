@@ -1,7 +1,7 @@
 FROM rocklobster/chocolatey:0.10.5
 
 LABEL maintainer="tom@thingamajig.net"
-LABEL description="Windows Server Core with Chocolatey"
+LABEL description="Windows Server Core running PoshBot"
 
 #ENV SLACK_TOKEN
 ENV BOT_NAME poshbot
@@ -16,10 +16,11 @@ RUN powershell -executionpolicy bypass -command \
 	Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 RUN powershell -executionpolicy bypass -command \
-      Install-Module -Name PoshBot ;\
+	Install-Module -Name PoshBot ;\
 	Import-Module PoshBot
 
 COPY setupBot.ps1 .
 
 #CMD [ "powershell", ". c:\bot\setupBot.ps1" ]	
 CMD powershell . c:\bot\setupBot.ps1
+
